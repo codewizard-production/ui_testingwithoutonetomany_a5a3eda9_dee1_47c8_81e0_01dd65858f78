@@ -1,0 +1,89 @@
+{
+
+"startup": [
+    {
+        "key": "SId",
+        "type": "keyid",
+        "UIComponentTitle": "Startup"
+    }
+    
+    ,{
+        "key": "Logo",
+        "label": "Logo",
+        "type": "doc",
+        "accept": ".JPG,.JPEG,.PNG",
+        "width": "30%",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Name",
+        "label": "Name",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "FoundingDate",
+        "label": "FoundingDate",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "ContactNumber",
+        "label": "ContactNumber",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "StartupCurrentStage",
+        "label": "CurrentStage",
+        "type": "dropdown",
+        "valueId": "StageId",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "Stage",
+        "uicomponent": "stagecurrentstage",
+        "create": true,
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+
+,"stagecurrentstage": [
+    {
+        "key": "StageId",
+        "type": "keyid",
+        "UIComponentTitle": "Stage"
+    }
+    ,{
+        "key": "Name",
+        "label": "Name",
+        "type": "dropdown",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "StageName",
+        "enum": true,
+        "editable": true,
+        "validators": [
+             "isNumber"
+        ]
+                            }
+    ,{
+        "key": "Description",
+        "label": "Description",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+}
